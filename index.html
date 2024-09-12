@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+//😊 Exercice 1 : Vérification de l'âge
+
+let age = Number(prompt("Entrez votre âge :"));
+
+if (age < 18) {
+  console.log("Vous êtes mineur");
+}
+
+else if (age >= 18 && age < 65) {
+  console.log("Vous êtes adulte");
+}
+
+else {
+  console.log("Vous êtes senior");
+}
+
+
+//😅 Exercice 2 : Parité d'un nombre
+
+let nombre = Number(prompt("Entrez un nombre :"));
+
+if (isNaN(nombre)) {
+  console.log("Ce n'est pas un nombre valide");
+} else {
+  
+  if (nombre % 2 === 0) {
+    console.log("Le nombre est pair");
+  } else {
+    console.log("Le nombre est impair");
+  }
+}
+
+//😊 Exercice 3 : Note d'examen
+
+let note = Number(prompt("Entrez votre note :"));
+
+if (isNaN(note)) {
+  console.log("Ce n'est pas un nombre valide");
+} else {
+  switch (true) {
+    case (note >= 16):
+      console.log("Excellent");
+      break;
+    case (note >= 12):
+      console.log("Bien");
+      break;
+    case (note >= 8):
+      console.log("Passable");
+      break;
+    case (note >= 0):
+      console.log("Insuffisant");
+      break;
+    default:
+      console.log("Note invalide");
+  }
+}
+
+//😰 Exercice 4 : Calcul de la réduction
+
+
+let age1 = Number(prompt("Entrez votre âge :"));
+
+let prix = Number(prompt("Entrez le prix :"));
+
+let réduction = 0;
+
+if (age1 < 18) {
+  réduction = 0.10; 
+} else if (age1 >= 18 && age1 <= 25) {
+  réduction = 0.05; 
+} else if (age1 >= 60) {
+  réduction = 0.15; 
+}
+
+let prixFinal = prix - (prix * réduction);
+
+prixFinal = prixFinal.toFixed(2);
+
+console.log("Le prix final après réduction est : " + prixFinal + " €");
+
+
+//😰 Exercice 5 : Jeu de devinette
+
+let nombreMystere = Math.floor(Math.random() * 10) + 1;
+
+let nombreDevine = Number(prompt("Devinez un nombre entre 1 et 10 :"));
+
+if (isNaN(nombreDevine)) {
+  console.log("Ce n'est pas un nombre valide");
+} else {
+  if (nombreDevine < nombreMystere) {
+    console.log("Le nombre mystère est plus grand !");
+  } else if (nombreDevine > nombreMystere) {
+    console.log("Le nombre mystère est plus petit !");
+  } else {
+    console.log("Bravo ! Vous avez deviné le nombre mystère !");
+  }
+}
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
